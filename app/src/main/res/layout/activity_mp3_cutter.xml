@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mp3_cutter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aw.mp3cutter.Mp3Cutter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.triggertrap.seekarc.SeekArc
+                    android:id="@+id/seekbar_song_play"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    android:padding="30dp"
+                    seekarc:progressColor="@color/colorAccent"
+                    seekarc:rotation="180"
+                    seekarc:startAngle="50"
+                    seekarc:sweepAngle="260" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_artwork"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/cd_drive" />
+
+                <Chronometer
+                    android:id="@+id/chronometer_song_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_artwork"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_cut"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_content_cut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_play_pause"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/play_button" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+<LinearLayout
+    android:weightSum="2"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/txt_from"
+            android:text="From"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <com.bq.markerseekbar.MarkerSeekBar
+            android:id="@+id/marker_seekbar_from"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/txt_from"
+            android:layout_toLeftOf="@+id/tv_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:max="100"
+            app:markerColor="@color/colorPrimary"
+            app:markerTextColor="#ffffff" />
+        <TextView
+            android:text="0:0"
+            android:id="@+id/tv_from"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/txt_to"
+            android:text="To"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <com.bq.markerseekbar.MarkerSeekBar
+            android:id="@+id/marker_seekbar_to"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/txt_to"
+            android:layout_toLeftOf="@+id/tv_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            app:markerColor="@color/colorPrimary"
+            app:markerTextColor="#ffffff" />
+        <TextView
+            android:text="0:0"
+            android:id="@+id/tv_to"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

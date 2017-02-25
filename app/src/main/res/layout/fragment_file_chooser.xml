@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aw.mp3cutter.FileChooser">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="56dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ib_browse">
+
+            <TextView
+                android:id="@+id/et_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+
+                android:background="@drawable/square_white"
+
+                android:padding="16dp" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/ib_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/search_file" />
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:id="@+id/ll_edit"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_btn_bg"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="EDIT"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/edittag" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
