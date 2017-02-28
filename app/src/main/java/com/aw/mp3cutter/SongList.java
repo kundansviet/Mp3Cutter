@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.aw.mp3cutter.utility.Constant;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -121,8 +123,8 @@ public class SongList extends Fragment implements RecyclerItemClickListener.OnIt
         data = song_data.get(position);
 
         Intent intent = new Intent(getActivity(), Mp3Cutter.class);
-        intent.putExtra("fPath", data.song_path);
-        intent.putExtra("artwork",data.song_artwork);
+        intent.putExtra(Constant.FILE_PATH, data.song_path);
+        intent.putExtra(Constant.ARTWORK, data.song_artwork);
         startActivity(intent);
     }
 
@@ -183,4 +185,8 @@ public class SongList extends Fragment implements RecyclerItemClickListener.OnIt
 
 
     }
+
+
+
+
 }

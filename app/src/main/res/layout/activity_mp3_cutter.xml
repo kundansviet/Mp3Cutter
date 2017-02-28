@@ -55,14 +55,14 @@
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/fab_cut"
-                    android:layout_alignParentBottom="true"
-
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:src="@drawable/ic_content_cut"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_content_cut" />
 
             </RelativeLayout>
 
@@ -79,84 +79,97 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
-<LinearLayout
-    android:weightSum="2"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
-        android:layout_margin="16dp"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
 
-        <TextView
-            android:id="@+id/txt_from"
-            android:text="From"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content" />
-        <com.bq.markerseekbar.MarkerSeekBar
-            android:id="@+id/marker_seekbar_from"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/txt_from"
-            android:layout_toLeftOf="@+id/tv_from"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="2">
 
-            android:max="100"
-            app:markerColor="@color/colorPrimary"
-            app:markerTextColor="#ffffff" />
-        <TextView
-            android:text="0:0"
-            android:id="@+id/tv_from"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:gravity="center_horizontal"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_height="0dp">
-        <TextView
-            android:id="@+id/txt_to"
-            android:text="To"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content" />
-        <com.bq.markerseekbar.MarkerSeekBar
-            android:id="@+id/marker_seekbar_to"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/txt_to"
-            android:layout_toLeftOf="@+id/tv_to"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="100"
-            app:markerColor="@color/colorPrimary"
-            app:markerTextColor="#ffffff" />
-        <TextView
-            android:text="0:0"
-            android:id="@+id/tv_to"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txt_from"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="From" />
 
-</LinearLayout>
+                    <com.bq.markerseekbar.MarkerSeekBar
+                        android:id="@+id/marker_seekbar_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_toLeftOf="@+id/tv_from"
+                        android:layout_toRightOf="@+id/txt_from"
+                        android:max="100"
+                        app:markerColor="@color/colorPrimary"
+                        app:markerTextColor="#ffffff" />
 
+                    <TextView
+                        android:id="@+id/tv_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0:0" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_to"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="To" />
+
+                    <com.bq.markerseekbar.MarkerSeekBar
+                        android:id="@+id/marker_seekbar_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_toLeftOf="@+id/tv_to"
+                        android:layout_toRightOf="@+id/txt_to"
+                        android:max="100"
+                        app:markerColor="@color/colorPrimary"
+                        app:markerTextColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/tv_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0:0" />
+                </RelativeLayout>
+
+
+                <Button
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:id="@+id/bt_save"
+                    android:text="@string/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
 
 
         </RelativeLayout>
 
 
     </LinearLayout>
-
-
 
 
 </RelativeLayout>
